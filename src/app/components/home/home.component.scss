@@ -1,0 +1,75 @@
+.home-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.intro-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+  margin-bottom: 48px;
+
+  .intro-text {
+    h1 {
+      margin-bottom: 16px;
+      font-size: 28px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 6px;
+        font-size: 15px;
+      }
+    }
+  }
+
+  .intro-image {
+    img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  .intro-description {
+    border-left: 2px solid #444;
+    padding-left: 16px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
+
+.contact-section {
+  h2 {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+
+    .contact-card {
+      background-color: #1e1e1e;
+      padding: 12px 16px;
+      border: 1px solid #333;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+  }
+}
+.home-page {
+  display: flex;
+  flex-direction: column;
+  margin-left: 250px; /* Adjusted for the sidebar width */
+  padding: 24px;
+  background-color: #121212;
+  color: #e0e0e0;
+  height: calc(100vh - 60px); /* Full height excluding the header */
+  overflow-y: auto; /* Add this to allow scrolling if the content exceeds viewport */
+}

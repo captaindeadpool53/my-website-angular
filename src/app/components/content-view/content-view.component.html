@@ -1,0 +1,25 @@
+<div class="page-container">
+  <div class="content-container">
+    <div class="content-view" *ngIf="item">
+      <div class="content-header">
+        <h2>{{ item.title }}</h2>
+        <div class="content-meta" *ngIf="item.date">{{ item.date }}</div>
+      </div>
+
+      <div class="content-body">
+        <div class="content-image" *ngIf="item.fullImage">
+          <img [src]="item.fullImage" [alt]="item.title" />
+        </div>
+
+        <div class="content-text" [innerHTML]="item.content"></div>
+      </div>
+
+      <app-comments
+        *ngIf="showComments"
+        [itemId]="selectedItemId"
+        (closeComments)="toggleComments()"
+      >
+      </app-comments>
+    </div>
+  </div>
+</div>

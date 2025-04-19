@@ -1,0 +1,13 @@
+<div class="sidebar">
+  <div class="sidebar-items">
+    <div
+      *ngFor="let page of mainPages"
+      class="page-item"
+      [class.active]="currentPageId === page.id"
+    >
+      <div class="main-page">
+        <a [routerLink]="['/', page.id]">{{ page.title }}</a>
+      </div>
+    </div>
+  </div>
+</div>

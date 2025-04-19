@@ -1,0 +1,41 @@
+<div class="home-content">
+  <!-- Intro Section -->
+  <section class="intro-section">
+    <div class="intro-text">
+      <h1>Jatin Kumar</h1>
+      <ul>
+        <li>Free thinker.</li>
+        <li>Sentientist.</li>
+        <li>Art admirer.</li>
+        <li>Aspiring polymath.</li>
+        <li>Curious.</li>
+        <li>Skeptic.</li>
+        <li>Honest.</li>
+        <li>INTP-T MBTI type.</li>
+      </ul>
+    </div>
+
+    <div class="intro-image">
+      <img src="https://i.imgur.com/eVoV2LD.jpg" alt="Jatin walking in woods" />
+    </div>
+
+    <div class="intro-description">
+      <p>
+        Hey, I'm a guy who loves science, philosophy and art. On a journey to
+        discover myself in the madness called life. :)
+      </p>
+      <p>
+        Currently a Software Engineer, looking to transition into the expanding
+        field of Machine Learning.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h2>Contacts</h2>
+    <div class="contact-card" *ngFor="let contact of contactLinks">
+      {{ contact.icon }} {{ contact.label }}
+    </div>
+  </section>
+</div>

@@ -1,0 +1,39 @@
+<div class="page-container">
+  <!-- Optional horizontal submenu that only shows for certain pages -->
+  <div class="horizontal-submenu" *ngIf="showSubMenu">
+    <ul>
+      <li
+        *ngFor="let submenu of subMenuItems"
+        [class.active]="currentSubMenuId === submenu.id"
+      >
+        <a [routerLink]="['/', pageId, submenu.id]">{{ submenu.title }}</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="content-container">
+    <div
+      class="content-grid"
+      *ngIf="pageData.items && pageData.items.length > 0"
+    >
+      <div
+        class="item-card"
+        *ngFor="let item of pageData.items"
+        (click)="openItem(item.id)"
+      >
+        <a [routerLink]="['/', pageId, subpageId, item.id]">
+          <div class="card-image" *ngIf="item.image">
+            <img [src]="item.image" [alt]="item.title" />
+          </div>
+          <div class="item-info">
+            <h3>{{ item.title }}</h3>
+            <div class="item-date" *ngIf="item.date">{{ item.date }}</div>
+            <div class="item-description" *ngIf="item.description">
+              {{ item.description }}
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
